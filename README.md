@@ -1,39 +1,39 @@
-# Tic Tac Toe
+# 🎮 Tic Tac Toe
 
 A feature-rich Tic-Tac-Toe game built in Python with AI opponents, multiplayer support, user management, and persistent game history.
 
 ---
 
-## Features
+## ✨ Features
 
-### Game Modes
+### 🎯 Game Modes
 
-- **Single Player vs AI** with 3 difficulty levels:
-  - Easy: Random moves
-  - Medium: Basic strategy with blocking
-  - Hard: Monte Carlo Tree Search (MCTS) implementation
-- **Two Player (1v1)** local multiplayer
+- **🤖 Single Player vs AI** with 3 difficulty levels:
+  - 🟢 Easy: Random moves
+  - 🟡 Medium: Basic strategy with blocking
+  - 🔴 Hard: Monte Carlo Tree Search (MCTS) implementation
+- **👥 Two Player (1v1)** local multiplayer
 
-### Core Features
+### 🛠️ Core Features
 
-- User Management - Create and manage player profiles
-- Game History - View complete game histories with move-by-move replay
-- Leaderboard - Track player statistics including wins, losses, ties, and win rates
-- Settings - Customizable game options
-- Auto-save - Automatically save game progress
-- Undo/Replay - Undo moves or replay completed games
-- Guest Mode - Play without creating a user profile
+- 👤 User Management - Create and manage player profiles
+- 📜 Game History - View complete game histories with move-by-move replay
+- 🏆 Leaderboard - Track player statistics including wins, losses, ties, and win rates
+- ⚙️ Settings - Customizable game options
+- 💾 Auto-save - Automatically save game progress
+- ↩️ Undo/Replay - Undo moves or replay completed games
+- 🎭 Guest Mode - Play without creating a user profile
 
 ---
 
-## Installation
+## 🚀 Installation
 
-### Prerequisites
+### 📋 Prerequisites
 
 - Python 3.6 or higher
 - pip (Python package manager)
 
-### Steps
+### 📝 Steps
 
 1. Clone the repository
 ```bash
@@ -53,7 +53,7 @@ python main.py
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 tic-tac-toe/
@@ -69,27 +69,27 @@ tic-tac-toe/
 
 ---
 
-## How to Play
+## 🎯 How to Play
 
-### Main Menu Options
+### 📋 Main Menu Options
 
-1. New Game - Start a new match
-2. Users - Manage player profiles
-3. Leaderboard - View player rankings
-4. Game History - Review past games
-5. Settings - Customize game options
-6. Instruction - View game rules
-7. About Us - Credits
-8. Exit - Quit the game
+1. 🆕 New Game - Start a new match
+2. 👥 Users - Manage player profiles
+3. 🏆 Leaderboard - View player rankings
+4. 📜 Game History - Review past games
+5. ⚙️ Settings - Customize game options
+6. 📖 Instruction - View game rules
+7. ℹ️ About Us - Credits
+8. 🚪 Exit - Quit the game
 
-### Controls
+### 🎮 Controls
 
 - Enter **1-9** to place your mark on the corresponding board position
 - Press **U** to undo your last move (if enabled in settings)
 - Press **R** to replay a move (if enabled in settings)
 - Press **B** to go back to previous menu
 
-### Board Layout
+### 📊 Board Layout
 
 ```
  1 | 2 | 3
@@ -101,11 +101,11 @@ tic-tac-toe/
 
 ---
 
-## Settings
+## ⚙️ Settings
 
 | Setting | Options | Description |
 |---------|---------|-------------|
-| Primary Mark | X, O | Choose your starting symbol |
+| Primary Mark | ❌, ⭕ | Choose your starting symbol |
 | Auto-save | On, Off | Automatically save game progress |
 | Show Board Numbers | On, Off | Display position numbers on board |
 | Turn Duration | 15s, 20s, 25s, 30s | Time limit per move |
@@ -114,7 +114,7 @@ tic-tac-toe/
 
 ---
 
-## Leaderboard
+## 🏆 Leaderboard
 
 Players are ranked based on:
 1. Number of wins (primary)
@@ -123,13 +123,13 @@ Players are ranked based on:
 4. Total games played
 
 Rankings:
-- 1st place: Gold
-- 2nd place: Silver
-- 3rd place: Bronze
+- 🥇 1st place: Gold
+- 🥈 2nd place: Silver
+- 🥉 3rd place: Bronze
 
 ---
 
-## Data Storage
+## 💾 Data Storage
 
 The game uses text files for data persistence:
 
@@ -151,9 +151,9 @@ start_mark|winner_id|loser_id|sequence|timestamp|result
 
 ---
 
-## Technical Details
+## 🛠️ Technical Details
 
-### Dependencies
+### 📦 Dependencies
 
 - colorama - Cross-platform colored terminal text
 - pyfiglet - ASCII art banner generation
@@ -161,7 +161,7 @@ start_mark|winner_id|loser_id|sequence|timestamp|result
 - time - Timer functionality and timestamps
 - os - System operations and file management
 
-### Key Classes
+### 🔑 Key Classes
 
 - page - Main menu and navigation controller
 - fetch - Data management layer (CRUD operations)
@@ -169,7 +169,7 @@ start_mark|winner_id|loser_id|sequence|timestamp|result
 
 ---
 
-## Troubleshooting
+## 🐛 Troubleshooting
 
 ### Common Issues
 
@@ -190,7 +190,7 @@ Ensure the DB directory has write permissions
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome!
 
@@ -202,44 +202,44 @@ Contributions are welcome!
 
 ### Areas for Improvement
 
-- Add network multiplayer
-- Implement more sophisticated AI algorithms
-- Add sound effects
-- Create GUI version
-- Add tournament mode
-- Add unit tests
-- Implement database storage (SQLite)
+- 🌐 Add network multiplayer
+- 🧠 Implement more sophisticated AI algorithms
+- 🔊 Add sound effects
+- 🖥️ Create GUI version
+- 🏆 Add tournament mode
+- ✅ Add unit tests
+- 🗄️ Implement database storage (SQLite)
 
 ---
 
-## License
+## 📝 License
 
 This project is open source and available under the MIT License.
 
 ---
 
-## Authors
+## 👥 Authors
 
 Your Name - [GitHub](https://github.com/yourusername)
 
 ---
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - Inspired by classic Tic-Tac-Toe games
-- Built with Python
+- Built with ❤️ using Python
 - Thanks to the open-source community
 
 ---
 
-## Support
+## 📞 Support
 
 - Open an issue on GitHub
 - Contact: your-email@example.com
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
 ```bash
 git clone https://github.com/yourusername/tic-tac-toe.git
@@ -250,13 +250,13 @@ python main.py
 
 ---
 
-## Requirements
+## 📄 Requirements
 
 ```
 colorama
-pyfiglet==0.7.5
+pyfiglet>=1.0.4
 ```
 
 ---
 
-**Enjoy the game!**
+**Enjoy the game! 🎮**
