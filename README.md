@@ -1,72 +1,62 @@
-XO Game - Python Tic-Tac-Toe
+# Tic Tac Toe
 
 A feature-rich Tic-Tac-Toe game built in Python with AI opponents, multiplayer support, user management, and persistent game history.
-🎮 Features
-Game Modes
 
-    Single Player vs AI with 3 difficulty levels:
+---
 
-        Easy: Random moves
+## Features
 
-        Medium: Basic strategy with blocking
+### Game Modes
 
-        Hard: Monte Carlo Tree Search (MCTS) implementation
+- **Single Player vs AI** with 3 difficulty levels:
+  - Easy: Random moves
+  - Medium: Basic strategy with blocking
+  - Hard: Monte Carlo Tree Search (MCTS) implementation
+- **Two Player (1v1)** local multiplayer
 
-    Two Player (1v1) local multiplayer
+### Core Features
 
-Core Features
+- User Management - Create and manage player profiles
+- Game History - View complete game histories with move-by-move replay
+- Leaderboard - Track player statistics including wins, losses, ties, and win rates
+- Settings - Customizable game options
+- Auto-save - Automatically save game progress
+- Undo/Replay - Undo moves or replay completed games
+- Guest Mode - Play without creating a user profile
 
-    User Management: Create and manage player profiles
+---
 
-    Game History: View complete game histories with move-by-move replay
+## Installation
 
-    Leaderboard: Track player statistics including wins, losses, ties, and win rates
+### Prerequisites
 
-    Settings: Customizable game options
+- Python 3.6 or higher
+- pip (Python package manager)
 
-    Auto-save: Automatically save game progress
+### Steps
 
-    Undo/Replay: Undo moves or replay completed games
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/tic-tac-toe.git
+cd tic-tac-toe
+```
 
-    Guest Mode: Play without creating a user profile
-
-AI Intelligence
-
-The AI uses three levels of sophistication:
-
-    Easy: Random move selection
-
-    Medium: Strategic blocking and winning moves
-
-    Hard: Monte Carlo Tree Search algorithm for optimal play
-
-🚀 Installation
-Prerequisites
-
-    Python 3.6 or higher
-
-    pip (Python package manager)
-
-Step 1: Clone the Repository
-bash
-
-git clone https://github.com/yourusername/xo-game.git
-cd xo-game
-
-Step 2: Install Dependencies
-bash
-
+2. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-Step 3: Run the Game
-bash
-
+3. Run the game
+```bash
 python main.py
+```
 
-📁 Project Structure
-text
+---
 
-xo-game/
+## Project Structure
+
+```
+tic-tac-toe/
 ├── main.py              # Main game file
 ├── requirements.txt     # Python dependencies
 ├── README.md           # This file
@@ -75,223 +65,198 @@ xo-game/
     ├── games.txt        # Game history
     ├── setting.txt      # Game settings
     └── instruction.txt  # Instructions text
+```
 
-🎯 How to Play
-Starting the Game
+---
 
-    Run the game and you'll see the main menu
+## How to Play
 
-    Choose from options:
+### Main Menu Options
 
-        New Game: Start a new match
+1. New Game - Start a new match
+2. Users - Manage player profiles
+3. Leaderboard - View player rankings
+4. Game History - Review past games
+5. Settings - Customize game options
+6. Instruction - View game rules
+7. About Us - Credits
+8. Exit - Quit the game
 
-        Users: Manage player profiles
+### Controls
 
-        Leaderboard: View player rankings
+- Enter **1-9** to place your mark on the corresponding board position
+- Press **U** to undo your last move (if enabled in settings)
+- Press **R** to replay a move (if enabled in settings)
+- Press **B** to go back to previous menu
 
-        Game History: Review past games
+### Board Layout
 
-        Settings: Customize game options
-
-        Instruction: View game rules
-
-        About Us: Credits
-
-Game Controls
-
-    Enter 1-9 to place your mark on the corresponding board position
-
-    U to undo your last move (if enabled in settings)
-
-    R to replay a move (if enabled in settings)
-
-    B to go back to previous menu
-
-Board Layout
-text
-
+```
  1 | 2 | 3
 ---+---+---
  4 | 5 | 6
 ---+---+---
  7 | 8 | 9
+```
 
-⚙️ Settings
-Available Settings
+---
 
-    Primary Mark: Choose X or O as your starting symbol
+## Settings
 
-    Auto-save: Enable/disable automatic game saving
+| Setting | Options | Description |
+|---------|---------|-------------|
+| Primary Mark | X, O | Choose your starting symbol |
+| Auto-save | On, Off | Automatically save game progress |
+| Show Board Numbers | On, Off | Display position numbers on board |
+| Turn Duration | 15s, 20s, 25s, 30s | Time limit per move |
+| Undo & Replay | On, Off | Enable undo and replay features |
+| Reset Game | - | Clear all data and reset settings |
 
-    Show Board Numbers: Toggle board position numbers
+---
 
-    Turn Duration: Set time limit for moves (15s, 20s, 25s, 30s)
+## Leaderboard
 
-    Undo & Replay: Enable/disable undo and replay features
+Players are ranked based on:
+1. Number of wins (primary)
+2. Win rate percentage
+3. Number of ties
+4. Total games played
 
-    Reset Game: Clear all data and reset settings to default
+Rankings:
+- 1st place: Gold
+- 2nd place: Silver
+- 3rd place: Bronze
 
-📊 Statistics & Leaderboard
+---
 
-The leaderboard ranks players based on:
+## Data Storage
 
-    Number of wins (primary)
+The game uses text files for data persistence:
 
-    Win rate percentage
+| File | Purpose |
+|------|---------|
+| DB/users.txt | Stores player names |
+| DB/games.txt | Stores game history with all moves |
+| DB/setting.txt | Stores game settings |
+| DB/instruction.txt | Game rules and instructions |
 
-    Number of ties
+### Game History Format
 
-    Total games played
-
-Leaderboard Display
-
-    🥇 Gold: 1st place
-
-    🥈 Silver: 2nd place
-
-    🥉 Bronze: 3rd place
-
-💾 Data Storage
-
-The game uses simple text files for data persistence:
-
-    DB/users.txt: Stores player names (one per line)
-
-    DB/games.txt: Stores game history with all moves and metadata
-
-    DB/setting.txt: Stores game settings in key=value format
-
-    DB/instruction.txt: Game rules and instructions
-
-Game History Format
-text
-
+```
 start_mark|winner_id|loser_id|sequence|timestamp|result
+```
 
-Where:
+- sequence: Comma-separated list of moves
+- result: 'T' for tie, empty for win/loss
 
-    sequence: Comma-separated list of moves
+---
 
-    result: 'T' for tie, empty for win/loss
+## Technical Details
 
-🎨 Visual Design
+### Dependencies
 
-    Colorful Terminal Output: Using the Colorama library for vibrant displays
+- colorama - Cross-platform colored terminal text
+- pyfiglet - ASCII art banner generation
+- random - AI move selection and guest naming
+- time - Timer functionality and timestamps
+- os - System operations and file management
 
-    ASCII Art Banner: Welcome screen with "XO" in stylized text
+### Key Classes
 
-    Intuitive UI: Clear menus with numbered options
+- page - Main menu and navigation controller
+- fetch - Data management layer (CRUD operations)
+- game - Game logic engine
 
-🔧 Technical Details
-Dependencies
+---
 
-    colorama: Cross-platform colored terminal text
+## Troubleshooting
 
-    pyfiglet: ASCII art banner generation
+### Common Issues
 
-    random: AI move selection and guest naming
+**ModuleNotFoundError: No module named 'colorama'**
+```bash
+pip install colorama
+```
 
-    time: Timer functionality and timestamps
+**ModuleNotFoundError: No module named 'pyfiglet'**
+```bash
+pip install pyfiglet
+```
 
-    os: System operations and file management
+**Permission denied when writing to DB files**
+```
+Ensure the DB directory has write permissions
+```
 
-Key Classes
+---
 
-    page: Main menu and navigation controller
+## Contributing
 
-    fetch: Data management layer (CRUD operations)
+Contributions are welcome!
 
-    game: Game logic engine
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-🐛 Troubleshooting
-Common Issues
+### Areas for Improvement
 
-Issue: ModuleNotFoundError: No module named 'colorama'
-bash
+- Add network multiplayer
+- Implement more sophisticated AI algorithms
+- Add sound effects
+- Create GUI version
+- Add tournament mode
+- Add unit tests
+- Implement database storage (SQLite)
 
-Solution: pip install colorama
+---
 
-Issue: ModuleNotFoundError: No module named 'pyfiglet'
-bash
-
-Solution: pip install pyfiglet
-
-Issue: Permission denied when writing to DB files
-text
-
-Solution: Ensure the DB directory has write permissions
-
-Quick Fix
-
-If you encounter any issues, try:
-bash
-
-pip install --upgrade colorama pyfiglet
-
-🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-    Fork the repository
-
-    Create a feature branch (git checkout -b feature/AmazingFeature)
-
-    Commit your changes (git commit -m 'Add some AmazingFeature')
-
-    Push to the branch (git push origin feature/AmazingFeature)
-
-    Open a Pull Request
-
-Areas for Improvement
-
-    Add network multiplayer
-
-    Implement more sophisticated AI algorithms
-
-    Add sound effects
-
-    Create GUI version
-
-    Add tournament mode
-
-    Add unit tests
-
-    Implement database storage (SQLite)
-
-📝 License
+## License
 
 This project is open source and available under the MIT License.
-👥 Arshia D.Sheibani
 
-🙏 Acknowledgments
+---
 
-    Inspired by classic Tic-Tac-Toe games
+## Authors
 
-    Built with love for Python programming
+Your Name - [GitHub](https://github.com/yourusername)
 
-    Thanks to the open-source community
+---
 
-📞 Support
+## Acknowledgments
 
-For questions or feedback:
+- Inspired by classic Tic-Tac-Toe games
+- Built with Python
+- Thanks to the open-source community
 
-    Open an issue on GitHub
+---
 
-    Contact: [arshiasheibani@gmail.com]
+## Support
 
-📋 Quick Start Commands
-bash
+- Open an issue on GitHub
+- Contact: your-email@example.com
 
-# Clone the repository
-git clone https://github.com/yourusername/xo-game.git
+---
 
-# Navigate to directory
-cd xo-game
+## Quick Start
 
-# Install dependencies
+```bash
+git clone https://github.com/yourusername/tic-tac-toe.git
+cd tic-tac-toe
 pip install -r requirements.txt
-
-# Run the game
 python main.py
+```
 
-Enjoy the game! 🎮
+---
+
+## Requirements
+
+```
+colorama
+pyfiglet==0.7.5
+```
+
+---
+
+**Enjoy the game!**
