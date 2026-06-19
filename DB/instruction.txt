@@ -1,0 +1,50 @@
+   
+   
+   Introduction
+   
+   "XO" which is also known as "Tic-Tac-Toe" is very famous and traditional game which has been played from a long time ago  
+   as a game that commanly is called "Dooz" in Iran. It's a turned base game that is played by two players and gives enoght time
+   to each side in order to calculate best move to secure a win for themself. The game can also end in a tie.
+   
+   
+   How to play?
+   
+   Well, the game is performed on board that holds 9 places as a 3x3 table. Each player choose a between "X" or "O" mark 
+   for themself. Obviously, both can not choose the same mark. After choosing marks one of the player put or draw mark assinged 
+   to him\her in any of 9 placed and that place won't be avilable in next turns for none of the players. After first player makes
+   his\her move it's time for the second player to do the same thing and the game continues so on.
+   
+   **sample of "XO" board:
+   
+         |   | 
+      ---+---+---
+         |   |
+      ---+---+---
+         |   |
+   
+   
+   The goal of game is to align 3 of same marks in row. The row could be vertically, horisentally or slantwise. If one of player
+   manage to do that, game instantly ends(it doesn't matter if opponent had less turns played) and player who do that wil be announced
+   the winner.
+   
+   **Sample of diffrent ways of winning:
+
+   
+   1) Horiosentally          2) Vertically             3) Slantwise
+
+       X | X | X                O |   | X                 O |   | X
+      ---+---+---              ---+---+---               ---+---+---
+         | O |                  O | X |                   O | X | 
+      ---+---+---              ---+---+---               ---+---+---
+       O |   |                  O |   | X                 X | O | 
+   
+   
+   If all placed get fulled and none of the player can align their marks in oeder to win, games would call a Tie.
+   
+   **Sample of a tied game:
+   
+       O | X | X
+      ---+---+---
+       X | X | O
+      ---+---+---
+       O | O | X

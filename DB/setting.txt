@@ -1,0 +1,5 @@
+primary_mark=X
+autosave=On
+show_board_number=On
+turn_duration=25s
+undo&replay=On
