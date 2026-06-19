@@ -220,7 +220,7 @@ This project is open source and available under the MIT License.
 
 ## 👥 Authors
 
-Your Name - [GitHub](https://github.com/yourusername)
+Arshia D.sheibani - [GitHub](https://github.com/arshiadsh)
 
 ---
 
@@ -235,7 +235,7 @@ Your Name - [GitHub](https://github.com/yourusername)
 ## 📞 Support
 
 - Open an issue on GitHub
-- Contact: your-email@example.com
+- Contact: arshiasheibani@gmail.com
 
 ---
 
