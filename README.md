@@ -232,7 +232,7 @@ Arshia D.sheibani - [GitHub](https://github.com/arshiadsh)
 
 ---
 
-## 📞 Support
+## 📞 Contact
 
 - Open an issue on GitHub
 - Contact: arshiasheibani@gmail.com
